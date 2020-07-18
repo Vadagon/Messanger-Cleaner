@@ -9,18 +9,14 @@
       "default_popup": "popup.html",
       "default_title": "Delete All Facebook Messanger messages"
    },
-   "content_scripts": [ {
-      "js": [ "content/content.js" ],
-      "matches": [ "*://*.facebook.com/*" ]
-   } ],
    "description": "Fast clean up your Facebook Messenger",
    "icons": {
       "128": "assets/icons/icon_128.png"
    },
    "manifest_version": 2,
    "name": "Delete All Facebook Messanger messages",
-   "permissions": [  "tabs", "storage", "*://*.facebook.com/*"],
+   "permissions": ["activeTab"],
    "short_name": "Messanger Cleaner",
-   "version": "1",
+   "version": "2",
    "web_accessible_resources": [ "content/*.js" ]
 }

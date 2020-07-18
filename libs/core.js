@@ -1,15 +1,6 @@
 class helper {
     constructor() {
         this.options = {};
-        chrome.storage.local.get(null, function (data) {
-            this.options = data;
-        }.bind(this));
-
-        chrome.storage.onChanged.addListener(function () {
-            chrome.storage.local.get(null, function (data) {
-                this.options = data;
-            }.bind(this));
-        }.bind(this));
     }
 
     load(key) {
