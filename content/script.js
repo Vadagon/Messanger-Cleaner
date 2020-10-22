@@ -450,13 +450,6 @@ function deletAllMessages(){
         window.location.href = '/messages';
     }, true);
 };
-//select and delete messages
-$("#delselect")
-    .click(function() {
-        insertCheckboxes();
-        insertDeleteBtn();
-    });
-
 
 
 

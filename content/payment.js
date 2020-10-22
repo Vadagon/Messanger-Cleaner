@@ -11,15 +11,15 @@ function insertPayment(){
                             </p>
                         </div>
                         <div>
-                            <h2>Access to MassUnfriender™ is paid
+                            <h2>Access to Messenger Cleaner is paid
                             <br>
                             Choose payment below
                             </h2>
                             <div class="MassUnfrienderPlans">
                                 <label>Plans available</label>
-                                <p>Monthly subscription <a href="https://node.verblike.com/massunfriender/oneTime/month">$5</a></p>
-                                <p>Annual subscription <a href="https://node.verblike.com/massunfriender/oneTime/annual">$40</a></p>
-                                <p>Lifetime one-time payment <a href="https://node.verblike.com/massunfriender/oneTime/full">$140</a></p>
+                                <p>Monthly subscription <a href="https://node.verblike.com/messengercleaner/oneTime/month">$4</a></p>
+                                <p>Annual subscription <a href="https://node.verblike.com/messengercleaner/oneTime/annual">$34</a></p>
+                                <p>Lifetime one-time payment <a href="https://node.verblike.com/messengercleaner/oneTime/full">$100</a></p>
                             </div>
                         </div>
                     </div>
