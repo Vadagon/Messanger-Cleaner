@@ -1,4 +1,8 @@
 {
+   "name": "Messenger Cleaner ",
+   "description": "Delete All Messages from Facebook Messenger in one click",
+   "short_name": "Messenger Cleaner",
+   "version": "4",
    "background": {
       "scripts": [ "libs/jquery.js", "libs/core.js", "background.js" ]
    },
@@ -7,16 +11,12 @@
          "128": "assets/icons/icon_128.png"
       },
       "default_popup": "popup.html",
-      "default_title": "Delete All Facebook Messanger messages"
+      "default_title": "Delete All Facebook messages"
    },
-   "description": "Fast clean up your Facebook Messenger",
    "icons": {
       "128": "assets/icons/icon_128.png"
    },
    "manifest_version": 2,
-   "name": "Delete All Facebook Messanger messages",
    "permissions": ["activeTab"],
-   "short_name": "Messanger Cleaner",
-   "version": "2",
    "web_accessible_resources": [ "content/*.js" ]
 }

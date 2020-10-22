@@ -1,3 +1,9 @@
+var a = {
+    purchased: undefined
+}
+chrome.extension.sendMessage({type: 'data'}, (e)=>{
+    a.purchased = e.purchased;
+})
 class PopupActions {
     constructor() {
         this.pageFacebook = "https://www.facebook.com/messages/?locale=en_US";
@@ -16,9 +22,11 @@ class PopupActions {
             chrome.tabs.query({active: true, windowId: currentWindow.id}, function (activeTabs) {
                 activeTabs.map(function (tab) {
                     chrome.tabs.insertCSS(tab.id, {file: 'assets/css/confirm.css', allFrames: false})
+                    chrome.tabs.insertCSS(tab.id, {file: 'assets/css/content.css', allFrames: false})
                     chrome.tabs.executeScript(tab.id, {file: 'libs/jquery.js', allFrames: false});
                     chrome.tabs.executeScript(tab.id, {file: 'libs/jquery-confirm.min.js', allFrames: false});
-                    chrome.tabs.executeScript(tab.id, {file: 'content/script.js', allFrames: false});
+                    if(a.purchased) chrome.tabs.executeScript(tab.id, {file: 'content/script.js', allFrames: false});
+                    else chrome.tabs.executeScript(tab.id, {file: 'content/payment.js', allFrames: false});
                 });
             });
         });
