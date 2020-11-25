@@ -2,7 +2,7 @@ var a = {
     purchased: undefined
 }
 chrome.extension.sendMessage({type: 'data'}, (e)=>{
-    a.purchased = e.purchased;
+    a = e;
 })
 class PopupActions {
     constructor() {

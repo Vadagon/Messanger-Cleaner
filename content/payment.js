@@ -18,8 +18,7 @@ function insertPayment(){
                             <div class="MassUnfrienderPlans">
                                 <label>Plans available</label>
                                 <p>Monthly subscription <a href="https://node.verblike.com/messengercleaner/oneTime/month">$4</a></p>
-                                <p>Annual subscription <a href="https://node.verblike.com/messengercleaner/oneTime/annual">$34</a></p>
-                                <p>Lifetime one-time payment <a href="https://node.verblike.com/messengercleaner/oneTime/full">$100</a></p>
+                                <p class="specialOffer">Special 24h access <span>limited time offer</span> <a href="https://node.verblike.com/messengercleaner/oneTime/oneday" class="specialYellowButton">$1.49</a></p>
                             </div>
                         </div>
                     </div>

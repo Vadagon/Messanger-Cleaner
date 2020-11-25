@@ -1,4 +1,3 @@
-
 html {
     /*font-family: sans-serif; /* 1 */*/
     -ms-text-size-adjust: 100%; /* 2 */
@@ -7,7 +6,8 @@ html {
 
 body {
     margin: 0;
-    box-sizing: content-box !important;
+/*    box-sizing: content-box !important;
+*/    
     border: 14px solid #324780;
 }
 
@@ -305,6 +305,9 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
+#removeMessages{
+    /*float: right;*/
+}
 
 html, body {
     height: 250px;
@@ -312,7 +315,8 @@ html, body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: #fff;
-    min-width: 350px;
+    width: 370px;
+    background: #324780;
 
 }
 
@@ -333,12 +337,16 @@ html, body {
     border: none;
     color: white;
     overflow: hidden;
-    margin: 1rem;
+    /*margin-right: 12px;*/
     padding: 0;
     text-transform: uppercase;
-    width: 200px;
-    height: 40px;
-
+    width: auto;
+    /*height: 40px;*/
+    font-size: 14px;
+    padding: 5px;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 0 !important;
 }
 .btn.color-1 {
     background-color: #426FC5;
@@ -550,6 +558,7 @@ button.disabled:hover{
 h4 {
     margin-top: 10px;
     font-weight: 300;
+    font-style: oblique;
 }
 
 .scroll {
