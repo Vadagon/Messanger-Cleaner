@@ -2,7 +2,7 @@
    "name": "Messenger Cleaner ",
    "description": "Delete All Messages from Facebook Messenger in one click",
    "short_name": "Messenger Cleaner",
-   "version": "5",
+   "version": "6",
    "background": {
       "scripts": [ "libs/jquery.js", "libs/core.js", "background.js" ]
    },
