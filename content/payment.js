@@ -1,4 +1,4 @@
-function insertPayment(){
+function insertPayment() {
     $(`<div id="payRequestUnfriender">
                 <div>
                     <div>
@@ -17,19 +17,29 @@ function insertPayment(){
                             </h2>
                             <div class="MassUnfrienderPlans">
                                 <label>Plans available</label>
-                                <p>Monthly subscription <a href="https://node.verblike.com/messengercleaner/oneTime/month">$4</a></p>
-                                <p class="specialOffer">Special 24h access <span>limited time offer</span> <a href="https://node.verblike.com/messengercleaner/oneTime/oneday" class="specialYellowButton">$1.49</a></p>
+                                <p>Monthly subscription <a href="https://node.verblike.com/messengercleaner/oneTime/month">$3.99</a></p>
+                                <p class="specialOffer">Unlimited access <span>limited time offer</span> <a href="https://node.verblike.com/messengercleaner/oneTime/oneday" class="specialYellowButton">$5.99</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>`).appendTo('body').on('click', 'button', function(event){
-                event.preventDefault()
-                chrome.extension.sendMessage({email: $(this).parent().find('input').val()}, (e)=>{
-                    if(e==true){
-                        $('#payRequestUnfriender').remove()
-                    }
-                })
-            })
+            </div>`).appendTo('body').on('click', 'button', function (event) {
+        event.preventDefault()
+        checkPayment($(this).parent().find('input').val(), (e) => {
+            if (e == true) {
+                $('#payRequestUnfriender').remove()
+                startScript();
+            }
+        })
+    })
 }
 insertPayment()
+
+
+function checkPayment(email, cb) {
+    $.get('https://us-central1-massunfriender.cloudfunctions.net/DBinsert/isMember?email=' + email).done((e) => {
+        cb(e && e.result)
+    }).fail(() => {
+        cb(false)
+    })
+}
